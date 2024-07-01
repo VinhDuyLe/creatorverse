@@ -1,0 +1,305 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&family=Sono:wght@800&family=Lilita+One&family=Montserrat');
+
+/* general styles */
+#root {
+  text-align: center;
+  justify-content: center;
+  font-family: 'Nunito';
+}
+
+/* Header for the home page */
+.header {
+  background-image: url('https://www.templeton.org/wp-content/uploads/2023/11/Purpose-of-Universe_BANNER.png');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.title-text {
+  font-family: 'Lilita One', sans-serif;
+  text-transform: uppercase;
+  font-size: 6rem; 
+  padding: 10px;
+  background-color: white;
+  background-image: linear-gradient(90deg, #F5F5DC 10%, #B03A2E 90%);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 4rem;
+  margin: auto;
+}
+
+/* Styles for showing all content creators */
+.ShowCreators {
+  background-color: #fff7bf;
+  padding: 50px;
+}
+
+.creators-cards {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: auto;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+/* Styles for content creator cards */
+.content-creator-card {
+  position: relative; 
+  transition: 0.3s;
+  padding: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  border-radius: 5px;
+  backdrop-filter: blur(14px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem 0.5rem;
+  width: 25vw;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.content-creator-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content-creator-card-details {
+  padding: 2px 16px;
+  flex-grow: 1;
+}
+
+.content-creator-card-details h2 {
+  font-family: 'Lilita One', sans-serif;
+  font-size: 1.5rem;
+  color: #515ee9;
+  margin: 10px 0;
+
+}
+
+.content-creator-card-header {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: flex;
+  gap: 1px;
+}
+
+.top-right-icon {
+  cursor: pointer;
+}
+
+.description {
+  font-size: 0.75em;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  color: black;
+}
+
+.content-creator-card-image {
+  width: 100%;
+  height: 200px; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-creator-card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Styles for viewing a single content creator */
+.view-one {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.view-one-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.view-one-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.creator-image {
+  flex: 1;
+  max-width: 100%;
+}
+
+.creator-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.creator-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.creator-details h2 {
+  margin: 0 0 10px;
+  font-family: 'Lilita One', sans-serif;
+  font-size: 2rem;
+  color: #54b3d6;
+}
+
+.creator-details p {
+  margin: 0 0 20px;
+}
+
+.social-btns {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  color: #54b3d6;
+  margin: 5px 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btns:hover {
+  color: #1a8cd8;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-edit-button {
+  background-color: var(--primary);
+  color: var(--primary-inverse);
+  transition-duration: 0.4s;
+  width: 100px;
+  margin: auto;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0F52BA;
+}
+
+.submit-edit-button:hover {
+  background-color: #0F52BA;
+}
+
+#delete-button {
+  color: white;
+  background-color: rgb(255, 105, 97);
+  transition-duration: 0.4s;
+  width: 100px;
+  margin: auto;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#delete-button:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Styles for the AddCreator component */
+.add-creator-container {
+  background-color: #1e1e1e; 
+  color: white; 
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 600px; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.add-creator-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left; 
+  gap: 0.05rem; 
+}
+
+.add-creator-form label {
+  font-size: 1.2rem;
+}
+
+.add-creator-form input,
+.add-creator-form textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; 
+  max-width: 100%; 
+  background-color: white; 
+  color: #333; 
+}
+
+.add-creator-form button.submit-button {
+  background-color: #007bff; 
+  color: white; 
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-creator-form button.submit-button:hover {
+  background-color: #0056b3; 
+}
+
+.add-creator-form input:focus,
+.add-creator-form textarea:focus {
+  border-color: #007bff; 
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+.input-description {
+  font-size: 0.9rem;
+  color: #999;
+}
